@@ -130,9 +130,7 @@ export class BookQueryContextMikroOrm implements BookQueryContext {
 
     bookId(value: number): BookQueryContext {
         Object.assign(this.ctx.where, {
-            id: {
-                $like: `%${value}%`,
-            },
+            id: value
         } as FilterQuery<BookModel>);
         return this;
     }
