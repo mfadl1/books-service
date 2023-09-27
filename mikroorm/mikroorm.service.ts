@@ -14,8 +14,7 @@ export class BookServiceMikroOrm implements BookCrudService {
         const em = this.entityManager.fork();
         const { where, options } = ctx.buildContext();
         const book = await em.find(BookModel, where, {
-            ...(options as any),
-            populate: ['productDetail'],
+            ...(options as any)
         });
 
         return book;
