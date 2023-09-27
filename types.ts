@@ -17,8 +17,8 @@ export interface CreateBookParams {
 export interface UpdateBookParams {
   id: number;
   bookDetail: {
-    title: string;
-    author: string;
-    publishDate: Date;
+      title: string;
+      author: string;
+      publishDate: Date;
   };
 }

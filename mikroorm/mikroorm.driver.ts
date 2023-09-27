@@ -22,9 +22,7 @@ export class MikroormDriver implements Driver {
         if (!this.connection) throw new Error(`Driver not initialized.`);
         if (api === API.BookQuery) {
             if (!this.bookInstance) {
-                this.bookInstance = new BookServiceMikroOrm(
-                    this.connection.em,
-                );
+                this.bookInstance = new BookServiceMikroOrm(this.connection.em);
             }
             return this.bookInstance;
         }
@@ -44,9 +42,7 @@ export class MikroormDriver implements Driver {
                     user: this.config.user,
                     schema: this.config.schema || 'public',
                     password: this.config.password,
-                    entities: [
-                        BookModel,
-                    ],
+                    entities: [BookModel],
                 }),
             );
         }

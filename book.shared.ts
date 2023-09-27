@@ -4,7 +4,7 @@ export const API = {
     BookQuery: Symbol.for('BookQuery'),
 };
 
-export type APIInstance = BookCrudService
+export type APIInstance = BookCrudService;
 
 export interface Driver {
     init(): Promise<void>;

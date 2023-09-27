@@ -52,5 +52,4 @@
             "./drivers/mikro-orm/mikro-orm.config.ts"
         ]
     }
-  }
-  
+}

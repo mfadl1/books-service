@@ -1,6 +1,5 @@
-import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
-import { Book } from "../../types";
-
+import { Entity, PrimaryKey, Property } from '@mikro-orm/core';
+import { Book } from '../../types';
 
 @Entity({ tableName: 'books' })
 export class BookModel implements Book {
